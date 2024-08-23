@@ -35,7 +35,7 @@ public class CreateCommand extends BaseRoseCommand {
         String id = name.toLowerCase().replace(".", "_");
 
         Tag newTag = new Tag(id, name, tag);
-        newTag.setDescription(Collections.singletonList("None"));
+        newTag.setDescription(Collections.singletonList("Uma tag personalizada!"));
         manager.saveTag(newTag);
 
         locale.sendMessage(sender, "command-create-created", StringPlaceholders.of("tag", manager.getDisplayTag(newTag, null)));
