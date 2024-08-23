@@ -168,9 +168,9 @@ public class TagsManager extends Manager {
         this.tagConfig.set("tags." + tag.getId() + ".tag", tag.getTag());
         this.tagConfig.set("tags." + tag.getId() + ".description", tag.getDescription());
         this.tagConfig.set("tags." + tag.getId() + ".permission", tag.getPermission());
-        this.tagConfig.set("tags." + tag.getId() + ".order", tag.getOrder());
+        // this.tagConfig.set("tags." + tag.getId() + ".order", tag.getOrder());
         this.tagConfig.set("tags." + tag.getId() + ".category", tag.getCategory());
-        this.tagConfig.set("tags." + tag.getId() + ".hand-icon", tag.isHandIcon());
+        // this.tagConfig.set("tags." + tag.getId() + ".hand-icon", tag.isHandIcon());
 
         if (tag.getIcon() != null && tag.isHandIcon()) // Only save the icon if it's a hand icon to prevent overwriting config defined items.
             this.tagConfig.set("tags." + tag.getId() + ".icon", TagsUtils.serializeItem(tag.getIcon()));
