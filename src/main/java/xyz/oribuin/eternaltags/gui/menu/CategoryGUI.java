@@ -174,8 +174,8 @@ public class CategoryGUI extends PluginMenu {
                     .add("category", category.getDisplayName())
                     .add("total", this.manager.getTagsInCategory(category).size());
 
-            if (this.config.getBoolean("gui-settings.only-unlocked-categories"))
-                placeholders.add("unlocked", this.manager.getCategoryTags(category, player).size());
+            // Mudança: placeholder é liberado em qualquer situação. Pode causar impacto na mudança mas deve ser insignificante
+            placeholders.add("unlocked", this.manager.getCategoryTags(category, player).size());
 
             ItemStack item = TagsUtils.deserialize(this.config, player, "categories." + category.getId() + ".display-item", placeholders.build());
             if (item == null) {

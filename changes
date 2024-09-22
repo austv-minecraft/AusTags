@@ -1,0 +1,2 @@
+CategoryGUI.java
+- placeholders.add("unlocked", this.manager.getCategoryTags(category, player).size()); agora libera um placeholder independente de qualquer configuração. Isso pode gerar um impacto na performance pois agora vai procurar sempre pelas tags possuídas pelos jogadores toda vez que abrir o menu. Se começar a pesar o EternalTags, possivelmente essa é a causa.
